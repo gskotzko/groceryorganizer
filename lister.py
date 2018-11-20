@@ -27,12 +27,17 @@ def main():
 	print("Thank you for playing. Your organized list in saved in ./sortedGroceryList")
 
 #Helper Functions -- Need to revisit.
-def foodLists():
-	groceries = {
-		"dairy": ('milk', 'butter','eggs','sour cream', 'sliced cheese'),
-		"meat": ('ribeye','chicken thighs','chicken breasts','ground turkey','ground beef','porkchops')
-		"drinks": ('beer','seltzer','red wine','white wine','soda')
-		"dry goods": ('cereal','dog food','ziploc bags',)}
+# def foodLists():
+# 	groceries = {
+# 		"dairy": ('milk', 'butter','eggs','sour cream', 'sliced cheese'),
+# 		"meat": ('ribeye','chicken thighs','chicken breasts','ground turkey','ground beef','porkchops'),
+# 		"drinks": ('beer','seltzer','red wine','white wine','soda','champagne'),
+# 		"dry goods": ('cereal','dog food','ziploc bags','canned soup','canned beans','beans')
+# 		"baked goods": ('bread','bagels','muffins')
+# 		"frozen foods": ('fish sticks','ice cream','pizza','lean cuisine')
+# 		"household": ('detergent','dryer sheets','bleach','')}
+
+	return groceries
 
 def selectStore():
 	#Ask user for raw input on which store they want; eg: Wegmans, Food Lion, LIDL
@@ -42,18 +47,26 @@ def selectStore():
 	2. Wegmans
 	3. Food Lion"""
 
-#	print(storeMenu)
+	print(storeMenu)
 #	getNonNegInt("Store Selection:")
 
 def storeOrder(store):
 	grocerySections = {1:"Dairy", 2:"Meat",3:"Produce",4:"Dry Goods",5:"Drinks",6:"Baked Goods",7:"Frozen Foods",8:"Household"}
 	#GroceryStore Orders....
+	groceries = {
+		"dairy": ('milk', 'butter','eggs','sour cream', 'sliced cheese','shredded cheese'),
+		"meat": ('ribeye','chicken thighs','chicken breasts','ground turkey','ground beef','porkchops'),
+		"drinks": ('beer','seltzer','red wine','white wine','soda','champagne'),
+		"dry goods": ('cereal','dog food','ziploc bags','canned soup','canned beans','beans'),
+		"baked goods": ('bread','bagels','muffins','cinnamon rolls'),
+		"frozen foods": ('fish sticks','ice cream','pizza','lean cuisine'),
+		"household": ('detergent','dryer sheets','bleach')}
 
 	LIDL = [6,3,2,1,7,4,5,8]
 	Wegmans = [3,6,2,1,7,4,5,8]
 	FoodLion = [3,7,4,2,5,8,1,6]
 
-	return storeOrder
+	return groceries,storeOrder
 
 def getList(directory):
 	grocery_list = glob.glob(directory)
@@ -68,8 +81,8 @@ def getList(directory):
 			break
 	return grocery_list[grocery_list_sel]
 
-def organizeList(groceryStore,storeOrder,groceryList):
-	#Open 
+def organizeList(groceries,groceryStore,storeOrder,groceryList):
+	#Open
 	for i in range(len(storeOrder)):
 		#sortedGroceryList.append(storeOrder[i])
 		for j in groceryList:
@@ -80,7 +93,6 @@ def organizeList(groceryStore,storeOrder,groceryList):
 		if groceryList[i] not in sortedGroceryList:
 			sortedGroceryList.append(groceryList[i])
 
-	
 
 def getNonNegInt(prompt):
     value = 0
