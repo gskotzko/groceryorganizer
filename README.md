@@ -14,7 +14,7 @@ How it's supposed to work (initial idea):
   + Selecting your store, selects a preferred flow through the store (Produce -> Dairy -> Meat -> Dry goods - > etc). Dependent on store.
 4. The script then parses your list, checks the item against the grocery sections and creates a new list that is organized by section of store.
 
-###Thing's I would like to improve:
+### Thing's I would like to improve:
 1. It's clunky - I don't like how the different grocery sections are defined. I'm thinking a keyed dictionary may be a better approach.
 2. It currently doesn't handle "new" items - need to build in a function that will say "if i not in list: (Prompt user to select section to append it to)
 3. Date coding of lists (should be a simple fix)
