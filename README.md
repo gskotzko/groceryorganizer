@@ -20,3 +20,4 @@ How it's supposed to work (initial idea):
 3. Date coding of lists (should be a simple fix)
 4. Expand the list of stores
 5. Eventually see if there are any APIs from stores like Wegmans, etc that access their in-store products
+6. Change to a GUI setup, eventually make it an app.
