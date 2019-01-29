@@ -4,7 +4,7 @@
 #### Grocery Organizer is a script that will allow you do parse a csv based, unorganized grocery list and then re-organize the list based on preferred store and how you like to flow through the store.
 
 ### Why?
-##### Because it's one of my weird ticks that I hate going into the grocery stores around here and dealing with the unwashed hordes while trying to group and organize my trip based off of an unorganized list. Or if I'm there with my kids and suddenly we're across the store and there was one last item back on the other side and I have now shlep them back over. 
+##### Because it's one of my weird ticks that I hate going into the grocery stores around here and dealing with the unwashed hordes while trying to group and organize my trip based off of an unorganized list (that someone else gave me). Or if I'm there with my kids and suddenly we're across the store and there was one last item back on the other side and I have now shlep them back over. 
 
 How it's supposed to work (initial idea):
 1. Place list in unsortlist folder
